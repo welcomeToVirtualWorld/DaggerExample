@@ -33,7 +33,7 @@ android {
 }
 
 dependencies {
-
+    def dagger_version = "2.40"
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
@@ -44,9 +44,6 @@ dependencies {
     /* Dagger2 - We are going to use dagger.android which includes
     * support for Activity and fragment injection so we need to include
     * the following dependencies */
-    implementation 'com.google.dagger:dagger-android:2.35.1'
-    kapt 'com.google.dagger:dagger-android-processor:2.17'
-
-    /* Dagger2 - default dependency */
-    kapt 'com.google.dagger:dagger-compiler:2.17'
+    implementation "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
 }
