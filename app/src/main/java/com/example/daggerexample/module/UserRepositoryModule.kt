@@ -6,6 +6,7 @@ import com.example.daggerexample.UserRepository
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
+import javax.inject.Singleton
 
 @Module
 abstract class UserRepositoryModule {
@@ -17,5 +18,6 @@ abstract class UserRepositoryModule {
 //    }
 
     @Binds
+    @Singleton
     abstract fun getFirebaseRepository(sqlRepository: SqlRepository): UserRepository
 }

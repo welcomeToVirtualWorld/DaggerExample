@@ -6,10 +6,12 @@ import com.example.daggerexample.SmsService
 import dagger.Module
 import dagger.Provides
 import javax.inject.Named
+import javax.inject.Singleton
 
 @Module
 class NotificationServiceModule() {
 
+    @Singleton
     @Named("sms")
     @Provides
     fun getMessageService(retryCount:Int): NotificationService {

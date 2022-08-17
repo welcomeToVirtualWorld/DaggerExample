@@ -2,6 +2,7 @@ package com.example.daggerexample
 
 import android.util.Log
 import javax.inject.Inject
+import javax.inject.Singleton
 
 interface UserRepository{
     fun saveUser(email:String,password:String)
